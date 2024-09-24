@@ -1,0 +1,662 @@
+
+
+  body {
+    background-image: url('opcion2.jpg'); /* Cambia la ruta por tu imagen de fondo */
+    background-size: cover; /* Hace que la imagen cubra toda el área */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+   
+}
+
+body::before{
+
+    content: "";
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    opacity: 1;
+    z-index: 1;
+}
+
+.logo{
+    margin-right: auto;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #0a0a0a;
+    font-weight: bold;
+    
+}
+
+nav {
+    
+    position: fixed; /* Fija la navegación en la parte superior */
+    top: 0; /* Posiciona en la parte superior */
+    left: 0; /* Alinea a la izquierda */
+    margin-left: auto;
+    width: 98%; /* Ocupa todo el ancho */
+    background-color: rgb(247, 81, 4); /* Color de fondo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 0;
+    
+}
+
+nav ul {
+    background-color: rgb(247, 81, 4); /* Color de fondo */
+    height: 60px;
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    align-items: center; /* Alinea verticalmente los elementos */
+    width: 98%; /* Ocupa todo el ancho disponible */
+    padding: 0;
+    margin: 0; /* Elimina los márgenes del ul */
+    list-style: none; /* Quita los puntos de la lista */
+    font-weight: bold;
+    
+}
+
+nav li {
+    margin-right: 20px; /* Añade espacio entre los elementos de la lista */
+   
+
+}
+
+nav a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: black; /* Color del texto del enlace */
+    font-size: 1.2rem; /* Tamaño del texto */
+    padding: 10px 20px; /* Espacio alrededor del texto (horizontal más amplio) */
+    transition: color 0.3s, background-color 0.3s; /* Transición suave en color y fondo */
+    text-align: center; /* Alinea el texto dentro del enlace */
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav a:hover {
+    color: rgb(243, 239, 239); /* Cambia el color del enlace al pasar el cursor */
+    background-color: black; /* Fondo negro al hacer hover */
+    border-radius: 40px; /* Bordes redondeados */
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.banner {
+   
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columnas */
+    align-items: flex-start; /* Alinea a la izquierda */
+    justify-content: center; /* Centra verticalmente el contenido */
+    height: 580px; /* Ajusta la altura según tus necesidades */
+    padding: 20px; /* Espaciado interno */
+    position: relative; /* Para posicionar el pseudo-elemento */
+    margin-bottom: 200px;
+}
+
+
+
+.banner::after {
+   
+    content: ""; /* Necesario para que el pseudo-elemento funcione */
+    position: absolute; /* Posiciona el pseudo-elemento sobre la imagen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0); /* Fondo negro con 50% de opacidad */
+    z-index: 2; /* Asegura que esté sobre la imagen */
+}
+.seccion2::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 2;
+}
+
+.banner > * {
+    position: relative; /* Asegura que el contenido esté sobre el fondo */
+    z-index: 3; /* Asegura que el contenido esté por encima del pseudo-elemento */
+}
+
+.seccion2> *{
+position: relative;
+z-index: 3;
+   
+}
+.seccion2 {
+    margin-top: 50px;
+    display: flex; /* Alinea el cuadro y la imagen en una fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente en el centro */
+    padding: 20px;
+    gap: 50px; /* Espacio uniforme entre el cuadro y la imagen */
+}
+
+.cuadro {
+    margin-top: 100px;
+    margin-left: 150px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 900px;
+    
+    padding: 20px;
+    border-radius: 40px;
+    color: white;
+    box-sizing: border-box;
+    height: 600px;
+}
+
+.perfil{
+    
+    margin-left: 170px;
+    font-size: 2rem;
+    color: #070707;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.fotoyo {
+    display: flex;
+    align-items: center; /* Asegura que la imagen se mantenga alineada verticalmente con el cuadro */
+    margin-right: 200px;
+    margin-top: 20px;
+}
+
+.fotoyo img {
+    height: 450px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para la imagen */
+}
+
+
+
+.img2 {
+    position: absolute; /* Posiciona el contenedor de la imagen de forma absoluta */
+    top: 50%; /* Ajusta verticalmente al centro del banner */
+    right: 20px; /* Ajusta horizontalmente desde el borde derecho del banner */
+    margin-right: 100px;
+    transform: translateY(-50%); /* Centra verticalmente respecto a la posición top del contenedor */
+    border-radius: 50%; /* Hace la imagen ovalada (forma de círculo) */
+    border: 5px solid #00ff00; /* Contorno de neón verde */
+    box-shadow: 0 0 15px #00ff00; /* Efecto de resplandor de neón */
+    overflow: hidden; /* Asegura que la imagen no se desborde del contenedor ovalado */
+}
+
+.img2 img {
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+    height: 350px; /* Asegura que la imagen sea un círculo perfecto */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+    display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+
+
+.greetings{
+   
+    font-size: 4rem;
+    font-weight: bold;
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #f0e7e7;
+        text-shadow: 0 0 12px #e46e0d, 0 0 50px #da4e0d, 0 0 100px #e78f0a;
+    }
+    10%, 90%{
+        color: #030303;
+        text-shadow: none;
+    }
+}
+
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+.greetings > span:nth-child(6){
+    animation-delay: 1s;
+}
+.greetings > span:nth-child(7){
+    animation-delay: 1.2s;
+}
+.greetings > span:nth-child(8){
+    animation-delay: 1.4s;
+}
+.greetings > span:nth-child(9){
+    animation-delay: 1.6s;
+}
+.greetings > span:nth-child(10){
+    animation-delay: 1.8s;
+}
+.greetings > span:nth-child(11){
+    animation-delay: 2s;
+}
+.greetings > span:nth-child(12){
+    animation-delay: 2.2s;
+}
+.greetings > span:nth-child(13){
+    animation-delay: 2.4s;
+}
+
+
+.description{
+    font-size: 3rem;
+    color: #070707;
+    font-family: Tahoma;
+
+}
+.description2{
+    font-size: 1.8rem;
+    color: black;
+    font-family: tahoma;
+}
+
+main button{
+   margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 140px;
+    outline: none;
+    border: 0;
+    height: 40px;
+    font-weight: 500;
+    background-color: #ff4321;
+    transition: width 0.5s;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #fff;
+ }
+ main button img{
+    display: none;
+
+ }
+ main button:hover img{
+    display: block;
+ }
+ main button:hover{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 160px;
+ }
+
+/* Contenedor de los iconos */
+.icono1, .icono2, .icono3 {
+    position: absolute; /* Posiciona los iconos de manera absoluta */
+    bottom: 8%; /* Mantiene los iconos en la parte inferior */
+    color: #fff; /* Color del icono por defecto */
+}
+
+.icono1 {
+    left: 20px; /* Ajusta la distancia del primer icono desde el borde izquierdo */
+}
+
+.icono2 {
+    left: 100px; /* Ajusta la distancia del segundo icono desde el borde izquierdo */
+}
+
+.icono3 {
+    left: 180px; /* Ajusta la distancia del tercer icono desde el borde izquierdo */
+}
+
+.icono1 > i, .icono2 > i, .icono3 > i {
+    font-size: 3rem; /* Aumenta el tamaño de los iconos */
+    padding: 0 15px; /* Ajusta el padding para un espaciado adecuado */
+    transition: all 0.3s ease; /* Mantiene la transición suave para los efectos de hover */
+    cursor: pointer; /* Cambia el cursor cuando se pasa el ratón sobre el icono */
+}
+
+.icono1 > i:hover {
+    color: black; /* Cambia el color del primer icono al pasar el ratón */
+}
+
+.icono2 > i:hover {
+    color: blue; /* Cambia el color del segundo icono al pasar el ratón */
+}
+
+.icono3 > i:hover {
+    color: palevioletred; /* Cambia el color del tercer icono al pasar el ratón */
+}
+
+
+
+.datos{
+
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 1rem;
+    font-family: tahoma;
+    color: #070707;
+}
+
+.dato{
+    font-weight: bold;
+}
+
+.dat{
+    font-weight: normal;
+    color: #fff;
+}
+
+.seccion3{
+ margin-top: 70px;
+}
+
+.titulo{
+    font-size: 2rem;
+    font-family: times;
+    color: #da4e0d;
+    font-weight: bolder;
+    text-decoration:overline
+}
+
+.lista {
+    margin: 50px 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente oscuro */
+    border-radius: 15px;
+    width: 40%; /* Ajusta el tamaño del contenedor */
+  }
+  
+  .lista h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .lista ul {
+    list-style-type: none; /* Quitar los marcadores por defecto */
+    padding-left: 0; /* Elimina el padding por defecto de las listas */
+  }
+  
+  .lista li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f4f4f4; /* Fondo para cada ítem de la lista */
+    border-radius: 8px;
+  }
+  
+  .lista li:hover {
+    background-color: #007bff; /* Cambia el color de fondo al pasar el cursor */
+    color: #fff; /* Cambia el color del texto al pasar el cursor */
+    transition: background-color 0.3s ease;
+  }
+
+.habilidades {
+  margin: 0; /* Elimina cualquier margen por defecto */
+  padding: 0; /* Elimina cualquier padding por defecto */
+  text-align: center; /* Alinea el título al centro si es necesario */
+  }
+
+.habilidades p{
+    margin: 0; /* Elimina el margen de la etiqueta <p> */
+    font-size: 3rem; /* Ajusta el tamaño del texto si es necesario */
+    color: #ff4321;
+    font-family:times;
+    text-align: left;
+    margin-left: 160px;
+    text-decoration:overline;
+    font-weight: bold;}
+.contenedor {
+   
+    display: flex;
+    flex-direction: row; /* Cambia a columna para que todo esté en vertical */
+    align-items: flex-start;
+    margin: 20px;
+    padding: 0;
+  }
+  
+  .imagenes, .imagenes2 {
+    display: flex; /* Mantén flex para las imágenes */
+    flex-direction: row; /* Alinea las imágenes en fila */
+    margin-left: 20px; /* Espacio entre la lista y las imágenes */
+  }
+  
+  .imagenes {
+    margin-top: 60px; /* Espacio sobre la primera fila de imágenes */
+  }
+  
+  .imagenes2 {
+    margin-top: 20px; /* Espacio sobre la segunda fila de imágenes */
+  }
+  
+  .imagenes img, .imagenes2 img {
+    margin-right: 20px; /* Espacio entre las imágenes */
+  }
+  
+  .ht {
+    height: 220px;
+    width: 180px;
+  }
+  
+  .cs {
+    height: 220px;
+    width: 200px;
+  }
+  
+  .jav {
+    height: 220px;
+    width: 150px;
+  }
+  
+  .mysql {
+    height: 250px;
+    width: 200px;
+  }
+  
+  .maria {
+    height: 250px;
+    width: 200px;
+  }
+  
+  .oracle {
+    height: 200px;
+    width: 200px;
+  }
+  
+  .seccion4{
+    margin-top: 70px;
+    margin-bottom: 50px;
+   }
+
+.proyectos{
+    display: flex;
+    justify-content: center;
+}   
+.proyectos p{
+    font-size: 2.3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #080808;
+    font-weight: bold;
+}
+.dos {
+    display: flex; /* Activa Flexbox */
+    flex-direction: row; /* Mantiene los elementos en una fila */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    margin-left: 50px; /* Ajusta el margen según lo necesites */
+    gap:400px;
+}
+.dos{
+    font-family:georgia;
+    font-size: 1.8rem;
+    color: #f71809;
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: #a5ccc7;
+    border-radius: 40px;
+}
+.muestra {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    gap: 40px; /* Espacio entre los elementos */
+}
+
+.bas,.inter {
+    height: 400px;
+    width: 600px;
+}
+
+.bas img,.inter img {
+    height: 100%; /* Asegura que la imagen llene el espacio del contenedor */
+    width: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    margin-top: 20px;
+}
+ .descripciones{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+padding: 20px;
+
+
+}
+.descripcionbase, .descripcioninterfaz{
+    width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+   text-align: justify;
+   font-size: 1.5rem;
+   font-weight: bold;
+
+}
+
+
+
+.galeria{
+   margin-top: 0;
+    display: flex;
+    align-content: center;
+    color: #007bff;
+    font-family:helvetica;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    justify-content: center;
+}
+
+.carrusel{
+    
+    width: 650px;
+    height: 400px;
+    margin: 0 auto;
+position: relative;
+    overflow: hidden;
+}
+
+.carrusel ul{
+   
+    list-style: none;
+    display: flex;
+    padding: 0;
+    animation: movimiento_slider 10s infinite alternate ease-in-out;
+}
+
+@keyframes movimiento_slider {
+    0% { transform: translateX(0%); }      /* Imagen 1 */
+    11.11% { transform: translateX(0%); }  /* Pausa en la imagen 1 */
+  
+    14% { transform: translateX(-100%); }  /* Imagen 2 */
+    25.11% { transform: translateX(-100%); } /* Pausa en la imagen 2 */
+  
+    28% { transform: translateX(-200%); }  /* Imagen 3 */
+    39.11% { transform: translateX(-200%); } /* Pausa en la imagen 3 */
+  
+    42% { transform: translateX(-300%); }  /* Imagen 4 */
+    53.11% { transform: translateX(-300%); } /* Pausa en la imagen 4 */
+  
+    56% { transform: translateX(-400%); }  /* Imagen 5 */
+    67.11% { transform: translateX(-400%); } /* Pausa en la imagen 5 */
+  
+    70% { transform: translateX(-500%); }  /* Imagen 6 */
+    81.11% { transform: translateX(-500%); } /* Pausa en la imagen 6 */
+  
+    84% { transform: translateX(-600%); }  /* Imagen 7 */
+    95.11% { transform: translateX(-600%); } /* Pausa en la imagen 7 */
+  
+    98% { transform: translateX(-700%); }  /* Imagen 8 */
+    109.11% { transform: translateX(-700%); } /* Pausa en la imagen 8 */
+  
+    112% { transform: translateX(-800%); } /* Imagen 9 */
+    123.11% { transform: translateX(-800%); } /* Pausa en la imagen 9 */
+
+    124% { transform: translateX(0%); }           /* Regresar al inicio */
+
+}
+  
+  
+
+
+
+.contacto {
+    margin-top: 100px;
+    text-align: center;
+    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 100px;
+    margin-top: 150px;
+  }
+  
+  .contacto h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  .contacto p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .contacto ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contacto li {
+    margin: 10px 0;
+  }
+  
+  .contacto a {
+    text-decoration: none;
+    color: #00aaff;
+    font-weight: bold;
+  }
+  
+  .contacto a:hover {
+    color: #005577;
+  }
+
+
+  nav a.active {
+    font-weight: bold; /* Cambia a negrita */
+    color: red; /* Cambia el color */
+}
